@@ -4,7 +4,7 @@ import MainContainer from './MainContainer'
 
 const Boady = () => {
   return (
-    <div>
+    <div className='flex'>
         <SideBar/>
         <MainContainer/>
     </div>

@@ -2,12 +2,15 @@
 import './App.css'
 import Head from './components/Head'
 import Body from './components/Body'
+import { Provider } from 'react-redux'
+import store from './utils/store'
 
 function App() {
 
   return (
+    <Provider store={store}>
    <div>
-     <h1 className='text-3xl'>Building Youtube</h1>
+     
      <Head/>
      <Body/>
      {/* {
@@ -21,6 +24,7 @@ function App() {
            videocard
        } */}
    </div>
+   </Provider>
   )
 }
 
