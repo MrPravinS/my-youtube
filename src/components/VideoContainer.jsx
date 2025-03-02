@@ -18,7 +18,7 @@ const VideoContainer = () => {
     if (jsonData.items) {
       setVideos(jsonData.items);
     }
-  };
+  }; 
 
   return (
     <div className="flex flex-wrap">
