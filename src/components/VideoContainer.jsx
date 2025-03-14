@@ -29,7 +29,7 @@ const VideoContainer = () => {
           </Link>
         ))
       ) : (
-        <p><Shimmer/></p>
+        <div><Shimmer/></div>
       )}
     </div>
   );

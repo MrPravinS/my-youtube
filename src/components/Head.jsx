@@ -9,7 +9,8 @@ const Head = () => {
   const [showSuggetions,setShowSuggetions] = useState(false)
   useEffect(() => {
     // console.log(searchQuery);
-    // make a api call after every key pressb
+    // make a api call after every key press
+  
     // but if the difference bet 2 api calss is <200 decline the api call
     const timer = setTimeout(() => getSearchSuggestions(), 200);
     return () => {
