@@ -55,10 +55,15 @@ const Comment = ({comment}) =>(
         <p className='m-2 font-bold'>{comment.username} <span>{comment.timestamp}</span> </p>
         <p>{comment.comment}</p>
         <p>Likes: {comment.likes}</p>
+        {comment.replies && comment.replies.length > 0 && (
+          <div className='pl-4 '>
+            {comment.replies.map(reply=>(
+              <Comment key={reply.id} comment={reply}/>
+            ))}
+          </div>
+        )}
       </div>
-      <div className=''>
       
-      </div>
     </div>
   );
 const CommentContainer = () => {
@@ -67,10 +72,12 @@ const CommentContainer = () => {
         <h1 className='text-2xl font-bold px-2 py-3'>
            Comments 
         </h1>
+        <div>
          {commentData.map(comment => (
-             <Comment comment={comment}/>
+             <Comment key={comment.id} comment={comment}/>
 
          ))}
+         </div>
         
     </div>
   )
